@@ -7,7 +7,7 @@ local _M = {
 
 local function data(token)
   math.randomseed(os.time())
-  return "5, 127.0.0.1, 127.0.0.1, " .. os.time(os.date("!*t")) .. ", " .. math.floor(math.random() * 10000000) .. ", " .. token
+  return "5, 127.0.0.1, 127.0.0.1, " .. os.time() .. ", " .. math.floor(math.random() * 10000000) .. ", " .. token
 end
 
 local function sign(path, data, key)
