@@ -1,5 +1,5 @@
-local hmac = require "openssl.hmac"
 local b64 = require "base64"
+local hmac = require "openssl.hmac"
 
 local _M = {
   _VERSION = '0.1'
