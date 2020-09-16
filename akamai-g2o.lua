@@ -88,8 +88,6 @@ function akamai_g2o_validate(path, data_header, signature_header, version, secre
 
     -- validate signature
     local expected_signature = akamai_g2o_versions[version](secret, data_header, path)
-    ngx.log(ngx.INFO, "expected signature: ", expected_signature)
-    ngx.log(ngx.INFO, "signature header: ", signature_header)
     if signature_header ~= expected_signature then
         return false, "wrong signature"
     end
