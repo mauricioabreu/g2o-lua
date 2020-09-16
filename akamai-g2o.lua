@@ -5,14 +5,6 @@ local function isempty(s)
     return s == nil or s == ''
 end
 
-local function tohex(b)
-    local x = ""
-    for i = 1, #b do
-        x = x .. string.format("%.2x", string.byte(b, i))
-    end
-    return x
-end
-
 -- character table string
 local b = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/'
 
